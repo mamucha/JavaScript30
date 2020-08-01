@@ -59,17 +59,17 @@
       const music = document.querySelectorAll(`audio`);
       const musicKey = document.querySelectorAll(`.key`);
 
-      window.addEventListener("keydown", (e) => {
+      window.addEventListener('keydown', (e) => {
         music.forEach((musicElement) => {
           if (musicElement.dataset.key == e.keyCode) {
             musicElement.currentTime = 0;
             musicElement.play();
 
             musicKey.forEach((el) => {
-              if (el.dataset.key == e.keyCode) el.classList.add("playing");
+              if (el.dataset.key == e.keyCode) el.classList.add('playing');
 
               setTimeout(() => {
-                el.classList.remove("playing");
+                el.classList.remove('playing');
               }, 100);
             });
           }
